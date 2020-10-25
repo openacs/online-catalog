@@ -41,7 +41,7 @@ create table ecca_ec_templates_audit (
 -- A trigger is used to move information from the main table to 
 -- the audit table
 create function ecca_ec_templates_audit_tr () 
-returns opaque as '
+returns trigger as '
 begin
         insert into ecca_ec_templates_audit (
         template_id, template_name,
